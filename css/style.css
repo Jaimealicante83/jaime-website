@@ -1,0 +1,55 @@
+@import url(hamburgers.css);
+#cabecera {
+  background-color: #1f1e1d; }
+  #cabecera #nav {
+    min-height: 20vh; }
+    #cabecera #nav #burger {
+      padding-top: 5vh;
+      padding-left: 5%; }
+  #cabecera #portada {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    #cabecera #portada #hero-container {
+      min-height: 60vh;
+      max-width: 85%;
+      jusify-self: center;
+      align-self: center; }
+      #cabecera #portada #hero-container h2 {
+        font-family: "Heebo", sans-serif;
+        font-size: 12px;
+        font-weight: 100;
+        letter-spacing: 1.5px;
+        color: #f84525;
+        margin: 0; }
+      #cabecera #portada #hero-container h1 {
+        font-family: "Heebo", sans-serif;
+        font-size: 50px;
+        line-height: 56px;
+        font-weight: 700;
+        color: #fff; }
+      #cabecera #portada #hero-container p {
+        font-family: "Hind", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #fff;
+        max-width: 80%; }
+      #cabecera #portada #hero-container #masInfo {
+        padding-top: 5vh;
+        max-width: 40%; }
+        #cabecera #portada #hero-container #masInfo i {
+          color: #fff;
+          display: inline;
+          cursor: pointer; }
+        #cabecera #portada #hero-container #masInfo i:hover {
+          color: #f84525; }
+        #cabecera #portada #hero-container #masInfo h4 {
+          color: #fff;
+          font-family: "Heebo", sans-serif;
+          display: inline;
+          cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

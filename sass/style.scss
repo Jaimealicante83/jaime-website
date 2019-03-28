@@ -1,0 +1,94 @@
+@import "hamburgers.css";
+
+$hamburger-layer-color: #000;
+
+
+
+$fontText:'Hind', sans-serif;		
+$fontTitle: 'Heebo', sans-serif;
+$fontButton:'Open Sans', sans-serif;
+$fondoOscuro: #1f1e1d;
+$fondoOscuro2: #232324;
+$naranja: #f84525;
+$blanco: #fff;
+
+
+#cabecera{
+	
+	background-color: $fondoOscuro;
+
+	#nav{
+		min-height: 20vh;
+
+		#burger{
+			padding-top: 5vh;
+			padding-left: 5%;
+		}
+
+	}
+
+	#portada{
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+
+		#hero-container{
+
+		min-height: 60vh;
+		max-width: 85%;
+		jusify-self: center;
+		align-self: center;
+
+			h2{	
+				font-family: $fontTitle;
+				font-size: 12px;
+				font-weight: 100;
+				letter-spacing: 1.5px;
+				color: $naranja;
+				margin: 0;
+			}
+
+			h1{
+				font-family: $fontTitle;
+				font-size: 50px;
+				line-height: 56px;
+				font-weight: 700;
+				color: $blanco;
+			}
+
+			p{
+				font-family: $fontText;
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 400;
+				color: $blanco;
+				max-width: 80%;
+			}
+
+			#masInfo{
+				padding-top: 5vh;
+				max-width: 40%;
+
+
+				i{
+					color: $blanco;
+					display: inline;
+					cursor: pointer;
+				}
+
+				i:hover{
+					color: $naranja;
+				}
+
+				h4{
+					color: $blanco;
+					font-family: $fontTitle;
+					display: inline;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
