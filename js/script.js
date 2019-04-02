@@ -5,6 +5,7 @@ const info = document.getElementById('info');
 const panelBlanco = document.getElementById('panelBlanco');
 const menuPrincipal = document.getElementById('menu');
 const contactContainer = document.getElementById('contactContainer');
+const fotoWeb = document.getElementById('fotoWeb');
 
 function hamburger(){
 
@@ -70,5 +71,109 @@ function enlace4(){
 }
 
 
+
+const izquierda = document.getElementById("izquierda");
+const derecha = document.getElementById("derecha");
+
+let counter = 0;
+
+let li1 = document.getElementById("li1");
+let li2 = document.getElementById("li2");
+let li3 = document.getElementById("li3");
+let li4 = document.getElementById("li4");
+
+
+
+
+document.querySelector('.icons').addEventListener('click', function(e){
+
+e.preventDefault();
+
+
+if( event.target.id === 'izquierda' ){
+	console.log("le diste a la flecha izquierda");
+	--counter;
+}
+
+ if ( event.target.id === 'derecha'){
+	console.log("le diste a la flecha derecha");
+	++counter;
+}
+
+if (counter === 0){
+		li1.classList.add('active');
+		li2.classList.remove('active');
+		li3.classList.remove('active');
+		li4.classList.remove('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/electrical.jpg'; }, 600);  
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+	}
+
+	else if (counter === 1){
+		li1.classList.remove('active');
+		li2.classList.add('active');
+		li3.classList.remove('active');
+		li4.classList.remove('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/seo.png'; }, 600);
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+	}
+
+	else if (counter === 2){
+		li1.classList.remove('active');
+		li2.classList.remove('active');
+		li3.classList.add('active');
+		li4.classList.remove('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/software.jpg'; }, 600);
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+	}
+
+	else if (counter === 3){
+		li1.classList.remove('active');
+		li2.classList.remove('active');
+		li3.classList.remove('active');
+		li4.classList.add('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/tienda.png'; }, 600);
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+	}
+
+	else if (counter < 0 ) {
+		counter = 3;
+		li1.classList.remove('active');
+		li2.classList.remove('active');
+		li3.classList.remove('active');
+		li4.classList.add('active');
+
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/tienda.png'; }, 600);
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+	}
+
+	else if (counter > 3 ) {
+		counter = 0;
+		li1.classList.add('active');
+		li2.classList.remove('active');
+		li3.classList.remove('active');
+		li4.classList.remove('active');
+
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/electrical.jpg'; }, 600);
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 1100);
+	}
+
+	console.log('El contador en contando es ' + counter);
+
+
+
+});
 
 
