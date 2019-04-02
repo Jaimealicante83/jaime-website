@@ -1,21 +1,147 @@
 @import "hamburgers.css";
 
 $hamburger-layer-color: #000;
-
-
-
 $fontText:'Hind', sans-serif;		
 $fontTitle: 'Heebo', sans-serif;
 $fontButton:'Open Sans', sans-serif;
 $fondoOscuro: #1f1e1d;
 $fondoOscuro2: #232324;
+$fondoOscuro3: #091b23;
 $naranja: #f84525;
 $blanco: #fff;
 
+#panelBlanco{
+	height: 100vh;
+	width: 100%;
+	background-color: #fff;
+	display: inline;
+	position: fixed;
+	z-index: 200;
+	margin-left: -600px;
+}
+
+#panelBlanco.clicked{
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  margin-left: 0px;
+}
+
+#panelBlanco.clickedBack{
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  margin-left: -600px;
+}
+
+#menu{
+	height: 100vh;
+	width: 100%;
+	background-color: #f4f4f4;
+	position: fixed;
+	display: block;
+	margin-left: -900px;
+	z-index: 300;
+
+	#ulContainer{
+		padding-top: 15vh;
+		padding-bottom: 5vh;
+
+		ul{
+			li{
+				list-style: none;
+				font-family: $fontTitle;
+				font-size: 3rem;
+				font-weight: 700;
+
+				a{
+					text-decoration: none;
+					color: #000;
+					cursor: pointer;
+				}
+			}
+		}
+
+	}
+
+	#contactContainer{
+		max-width: 70%;
+		margin-left: 40px;
+		opacity: 0;
+			p{
+				font-family: $fontText;
+
+				a{
+					color: $naranja;
+				}
+			}
+
+			#getTouch{
+				font-family: $fontTitle;
+				font-size: 16px;
+				font-weight: 700;
+			}
+
+
+			ul{
+				display: flex;
+				justify-content: space-between;
+				padding-top: 0vh;
+				padding-left: 0;
+				max-width: 50%;
+
+				li{
+					list-style: none;
+
+					i{
+						color: darkgrey;
+						cursor: pointer;
+						transition: color .6s;
+					}
+
+					i:hover{
+						color: black;
+					}
+				}
+			}
+		}
+
+		#contactContainer.opacidad{
+			-webkit-transition: 1s;
+			-moz-transition: 1s;
+			-ms-transition: 1s;
+		    -o-transition: 1s;
+		    transition: 1s;
+			opacity: 1;
+		}
+	}
+
+	#menu.clicked{
+		  -webkit-transition: 2s;
+		  -moz-transition: 2s;
+		  -ms-transition: 2s;
+		  -o-transition: 2s;
+		  transition: 2s;
+		  margin-left: 0px;
+	}
+
+	#menu.clickedBack{
+		  -webkit-transition: 2s;
+		  -moz-transition: 2s;
+		  -ms-transition: 2s;
+		  -o-transition: 2s;
+		  transition: 2s;
+		  margin-left: -900px;
+	}
 
 #cabecera{
 	
-	background-color: $fondoOscuro;
+	background-image: url(../img/641.jpg);
+	background-size: cover;
 
 	#nav{
 		min-height: 20vh;
@@ -23,8 +149,9 @@ $blanco: #fff;
 		#burger{
 			padding-top: 5vh;
 			padding-left: 5%;
+			outline:none;
+			z-index: 900;
 		}
-
 	}
 
 	#portada{
@@ -38,7 +165,7 @@ $blanco: #fff;
 
 		min-height: 60vh;
 		max-width: 85%;
-		jusify-self: center;
+		justify-self: center;
 		align-self: center;
 
 			h2{	
@@ -52,10 +179,14 @@ $blanco: #fff;
 
 			h1{
 				font-family: $fontTitle;
-				font-size: 50px;
-				line-height: 56px;
+				font-size: 46px;
+				line-height: 52px;
 				font-weight: 700;
 				color: $blanco;
+			}
+
+			span{
+				display: block;
 			}
 
 			p{
@@ -68,8 +199,8 @@ $blanco: #fff;
 			}
 
 			#masInfo{
-				padding-top: 5vh;
-				max-width: 40%;
+				margin-top: 5vh;
+				max-width: 120px;
 
 
 				i{
@@ -85,8 +216,730 @@ $blanco: #fff;
 				h4{
 					color: $blanco;
 					font-family: $fontTitle;
+					font-size: 12px;
 					display: inline;
 					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+#portfolio{
+	height: 100vh;
+	background-color: peru;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	.container{
+		background-color: green;
+		height: 100vh;
+		width: 90%;
+	}
+}
+
+
+@media screen and (min-width: 600px) { 
+
+#menu{
+
+	#ulContainer{
+		padding-top: 30vh;
+		padding-bottom: 12vh;
+
+		ul{
+			li{
+				list-style: none;
+				font-family: $fontTitle;
+				font-size: 3rem;
+				font-weight: 700;
+				padding: .4vh 0;
+
+				a{
+					text-decoration: none;
+					color: #000;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	#contactContainer{
+		max-width: 70%;
+		margin-left: 40px;
+			p{
+				font-family: $fontText;
+
+				a{
+					color: $naranja;
+				}
+			}
+
+
+			ul{
+				display: flex;
+				justify-content: space-between;
+				padding-top: 1vh;
+				padding-left: 0;
+				max-width: 30%;
+
+				li{
+					list-style: none;
+
+					i{
+						color: darkgrey;
+						cursor: pointer;
+						transition: color .6s;
+					}
+
+					i:hover{
+						color: black;
+					}
+				}
+			}
+		}
+	}
+	
+	#cabecera{
+		
+		background-color: $fondoOscuro;
+
+		#nav{
+			min-height: 40vh;
+
+			#burger{
+				padding-top: 5vh;
+				padding-left: 5%;
+			}
+		}
+
+		#portada{
+			min-height: 60vh;
+
+			#hero-container{
+				min-height: 60vh;
+				max-width: 85%;
+
+				p{
+					max-width: 70%;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 768px) { 
+
+	#panelBlanco{
+		height: 100vh;
+		width: 100%;
+		background-color: #fff;
+		display: inline;
+		position: fixed;
+		z-index: 200;
+		margin-left: -1024px;
+	}
+
+	#panelBlanco.clicked{
+	  margin-left: 0px;
+	}
+
+	#panelBlanco.clickedBack{
+	  margin-left: -1024px;
+	}
+
+	#menu{
+		margin-left: -1400px;
+	}
+
+	#menu.clicked{
+	  margin-left: 0px;
+	}
+
+	#menu.clickedBack{
+	  margin-left: -1400px;
+	}
+
+	#cabecera{
+
+		background-color: $fondoOscuro3;
+
+		#nav{
+			min-height: 20vh;
+
+			#burger{
+				padding-top: 5vh;
+				padding-left: 40px;
+			}
+		}
+
+		#portada{
+			min-height: 80vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+
+			#hero-container{
+
+			min-height: 40vh;
+			max-width: 80%;
+			justify-self: center;
+			align-self: center;
+
+				h2{	
+					font-size: 16px;
+				}
+
+				h1{
+					font-size: 72px;
+					line-height: 90px;
+				}
+
+				span{
+					display: block;
+				}
+
+				p{
+					font-size: 22px;
+					line-height: 38px;
+					max-width: 60%;
+				}
+
+				#masInfo{
+
+					i{
+						color: $blanco;
+						display: inline;
+						cursor: pointer;
+					}
+
+					i:hover{
+						color: $naranja;
+					}
+
+					h4{
+						color: $blanco;
+						font-family: $fontTitle;
+						display: inline;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 1024px) { 
+
+#panelBlanco{
+	width: calc(100% - 100px);
+	margin-left: -1200px;
+}
+
+#panelBlanco.clicked{
+  margin-left: 100px;
+}
+
+#panelBlanco.clickedBack{
+  margin-left: -1200px;
+}
+
+
+
+#menu{
+	width: calc(100% - 100px);
+	margin-left: -2200px;
+	display: flex;
+
+
+	#ulContainer{
+		padding-top: 30vh;
+		padding-bottom: 12vh;
+		width: 65%;
+
+		ul{
+			li{
+				font-size: 5rem;
+				padding: .4vh 0;
+
+				a{
+
+				}
+			}
+		}
+	}
+
+#contactContainer{
+	width: 35%;
+	margin-left: 0px;
+	padding-top: 55vh;
+
+		p{
+			font-family: $fontText;
+
+			a{
+				color: $naranja;
+			}
+		}
+
+
+		ul{
+			display: flex;
+			justify-content: space-between;
+			padding-top: 1vh;
+			padding-left: 0;
+			max-width: 150px;
+
+			li{
+
+				i{
+					color: darkgrey;
+					cursor: pointer;
+					transition: color .6s;
+				}
+			}
+		}
+	}
+}
+
+	#menu.clicked{
+	    margin-left: 100px;
+	}
+
+	#menu.clickedBack{
+		margin-left: -2200px;
+	}
+
+
+	#cabecera{
+		display: flex;
+		flex-direction: row;
+		
+		#nav{
+			min-height: 100vh;
+			width: 100px;
+			background-color: $fondoOscuro3;
+			display: flex;
+			justify-content: center;
+			z-index: 300;
+			position: fixed;
+
+			#burger{
+				padding: 0;
+			}
+		}
+
+		#portada{
+			height: 100vh;
+			width: calc(100% - 100px);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			margin-left: 100px;
+
+			#hero-container{
+
+			min-height: 40vh;
+			max-width: 80%;
+			padding-top: 100px;
+
+				h2{	
+					font-size: 16px;
+				}
+
+				h1{
+					font-size: 72px;
+					line-height: 90px;
+				}
+
+				span{
+					display: block;
+				}
+
+				p{
+					font-size: 22px;
+					line-height: 38px;
+					max-width: 60%;
+				}
+
+				#masInfo{
+					max-width: 150px;
+
+					i{
+						color: $blanco;
+						display: inline;
+						cursor: pointer;
+					}
+
+					i:hover{
+						color: $naranja;
+					}
+
+					h4{
+						color: $blanco;
+						font-family: $fontTitle;
+						display: inline;
+						cursor: pointer;
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 1200px) { 
+
+#panelBlanco{
+	width: calc(100% - 100px);
+	margin-left: -1440px;
+}
+
+#panelBlanco.clicked{
+  margin-left: 100px;
+}
+
+#panelBlanco.clickedBack{
+  margin-left: -1440px;
+}
+
+
+#menu{
+	width: calc(100% - 100px);
+	margin-left: -1740px;
+
+
+	#ulContainer{
+
+		ul{
+			padding-left: 120px;
+
+			li{
+				font-size: 4rem;
+
+				a{
+				
+				}
+			}
+		}
+	}
+
+#contactContainer{
+	width: 35%;
+	margin-left: 0px;
+	padding-top: 60vh;
+		p{
+			font-family: $fontText;
+			font-size: 18px;
+
+			a{
+				color: $naranja;
+			}
+		}
+
+		#getTouch{
+			font-size: 20px;
+		}
+
+
+		ul{
+			display: flex;
+			justify-content: space-between;
+			padding-top: 0;
+			padding-left: 0;
+			max-width: 150px;
+
+			li{
+
+				i{
+					color: darkgrey;
+					cursor: pointer;
+					transition: color .6s;
+				}
+			}
+		}
+	}
+}
+
+	#menu.clicked{
+	   margin-left: 100px;
+	}
+
+	#menu.clickedBack{
+		margin-left: -1740px;
+	}
+
+	#cabecera{
+		width: 100%;
+
+		#nav{
+			width: 100px;
+		}
+
+		#portada{
+			width: 100%;
+
+			#hero-container{
+
+				min-height: 40vh;
+				max-width: 80%;
+				padding-top: 100px;
+				padding-left: 6rem;
+				align-self: start;
+
+				h2{	
+					font-size: 16px;
+				}
+
+				h1{
+					font-size: 72px;
+					line-height: 90px;
+				}
+
+				span{
+					display: block;
+				}
+
+				p{
+					font-size: 22px;
+					line-height: 38px;
+					max-width: 60%;
+				}
+
+				#masInfo{
+					max-width: 150px;
+
+					i{
+						color: $blanco;
+						display: inline;
+						cursor: pointer;
+					}
+
+					i:hover{
+						color: $naranja;
+					}
+
+					h4{
+						color: $blanco;
+						font-family: $fontTitle;
+						display: inline;
+						cursor: pointer;
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 1440px) { 
+
+	#panelBlanco{
+		width: calc(100% - 100px);
+		margin-left: -1600px;
+	}
+
+	#panelBlanco.clicked{
+	    margin-left: 100px;
+	}
+
+	#panelBlanco.clickedBack{
+	  margin-left: -1600px;
+	}
+
+	#menu{
+		margin-left: -2000px;
+
+		#ulContainer{
+
+			ul{
+				padding-left: 170px;
+
+				li{
+					font-size: 4.5rem;
+					padding: .4rem 0;
+
+					a{
+					
+					}
+				}
+			}
+		}
+
+	#contactContainer{
+		width: 35%;
+		margin-left: 0px;
+		padding-top: 60vh;
+			p{
+				font-family: $fontText;
+				font-size: 18px;
+
+				a{
+
+				}
+			}
+
+			#getTouch{
+				font-size: 20px;
+			}
+
+
+			ul{
+
+				li{
+
+					i{
+
+					}
+				}
+			}
+		}
+	}
+
+	#menu.clicked{
+	   margin-left: 100px;
+	}
+
+	#menu.clickedBack{
+		margin-left: -2000px;
+	}
+}
+
+
+@media screen and (min-width: 1600px) { 
+
+	#panelBlanco{
+		width: calc(100% - 100px);
+		margin-left: -100%;
+	}
+
+	#panelBlanco.clicked{
+	    margin-left: 100px;
+	}
+
+	#panelBlanco.clickedBack{
+		 margin-left: -100%;
+	}
+
+
+	#menu{
+
+		margin-left: -120%;
+
+		#ulContainer{
+			padding-top: 20vh;
+
+			ul{
+				padding-left: 250px;
+
+				li{
+					font-size: 5.5rem;
+					padding: .4rem 0;
+
+					a{
+					
+					}
+				}
+			}
+		}
+
+	#contactContainer{
+
+			p{
+				font-family: $fontText;
+				font-size: 18px;
+
+				a{
+				
+				}
+			}
+
+			#getTouch{
+				font-size: 20px;
+			}
+
+
+			ul{
+
+				li{
+
+					i{
+
+					}
+				}
+			}
+		}
+	}
+
+	#menu.clicked{
+	   margin-left: 100px;
+	}
+
+	#menu.clickedBack{
+	   margin-left: -120%;
+	}
+
+
+	#cabecera{
+
+		#nav{
+			width: 100px;
+		}
+
+		#portada{
+
+			#hero-container{
+
+				min-height: 40vh;
+				max-width: 80%;
+				padding-top: 100px;
+				padding-left: 14rem;
+
+				h2{	
+					font-size: 16px;
+				}
+
+				h1{
+					font-size: 72px;
+					line-height: 90px;
+				}
+
+				span{
+					display: block;
+				}
+
+				p{
+					font-size: 22px;
+					line-height: 38px;
+					max-width: 60%;
+				}
+
+				#masInfo{
+
+					i{
+						color: $blanco;
+						display: inline;
+						cursor: pointer;
+					}
+
+					i:hover{
+						color: $naranja;
+					}
+
+					h4{
+						color: $blanco;
+						font-family: $fontTitle;
+						display: inline;
+						cursor: pointer;
+						padding-left: 10px;
+					}
 				}
 			}
 		}

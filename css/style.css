@@ -1,11 +1,109 @@
 @import url(hamburgers.css);
+#panelBlanco {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: inline;
+  position: fixed;
+  z-index: 200;
+  margin-left: -600px; }
+
+#panelBlanco.clicked {
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  margin-left: 0px; }
+
+#panelBlanco.clickedBack {
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  margin-left: -600px; }
+
+#menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f4f4;
+  position: fixed;
+  display: block;
+  margin-left: -900px;
+  z-index: 300; }
+  #menu #ulContainer {
+    padding-top: 15vh;
+    padding-bottom: 5vh; }
+    #menu #ulContainer ul li {
+      list-style: none;
+      font-family: "Heebo", sans-serif;
+      font-size: 3rem;
+      font-weight: 700; }
+      #menu #ulContainer ul li a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer; }
+  #menu #contactContainer {
+    max-width: 70%;
+    margin-left: 40px;
+    opacity: 0; }
+    #menu #contactContainer p {
+      font-family: "Hind", sans-serif; }
+      #menu #contactContainer p a {
+        color: #f84525; }
+    #menu #contactContainer #getTouch {
+      font-family: "Heebo", sans-serif;
+      font-size: 16px;
+      font-weight: 700; }
+    #menu #contactContainer ul {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0vh;
+      padding-left: 0;
+      max-width: 50%; }
+      #menu #contactContainer ul li {
+        list-style: none; }
+        #menu #contactContainer ul li i {
+          color: darkgrey;
+          cursor: pointer;
+          transition: color .6s; }
+        #menu #contactContainer ul li i:hover {
+          color: black; }
+  #menu #contactContainer.opacidad {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    opacity: 1; }
+
+#menu.clicked {
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  margin-left: 0px; }
+
+#menu.clickedBack {
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  margin-left: -900px; }
+
 #cabecera {
-  background-color: #1f1e1d; }
+  background-image: url(../img/641.jpg);
+  background-size: cover; }
   #cabecera #nav {
     min-height: 20vh; }
     #cabecera #nav #burger {
       padding-top: 5vh;
-      padding-left: 5%; }
+      padding-left: 5%;
+      outline: none;
+      z-index: 900; }
   #cabecera #portada {
     min-height: 80vh;
     display: flex;
@@ -15,7 +113,7 @@
     #cabecera #portada #hero-container {
       min-height: 60vh;
       max-width: 85%;
-      jusify-self: center;
+      justify-self: center;
       align-self: center; }
       #cabecera #portada #hero-container h2 {
         font-family: "Heebo", sans-serif;
@@ -26,10 +124,12 @@
         margin: 0; }
       #cabecera #portada #hero-container h1 {
         font-family: "Heebo", sans-serif;
-        font-size: 50px;
-        line-height: 56px;
+        font-size: 46px;
+        line-height: 52px;
         font-weight: 700;
         color: #fff; }
+      #cabecera #portada #hero-container span {
+        display: block; }
       #cabecera #portada #hero-container p {
         font-family: "Hind", sans-serif;
         font-size: 16px;
@@ -38,8 +138,129 @@
         color: #fff;
         max-width: 80%; }
       #cabecera #portada #hero-container #masInfo {
+        margin-top: 5vh;
+        max-width: 120px; }
+        #cabecera #portada #hero-container #masInfo i {
+          color: #fff;
+          display: inline;
+          cursor: pointer; }
+        #cabecera #portada #hero-container #masInfo i:hover {
+          color: #f84525; }
+        #cabecera #portada #hero-container #masInfo h4 {
+          color: #fff;
+          font-family: "Heebo", sans-serif;
+          font-size: 12px;
+          display: inline;
+          cursor: pointer; }
+
+#portfolio {
+  height: 100vh;
+  background-color: peru; }
+
+@media screen and (min-width: 600px) {
+  #menu #ulContainer {
+    padding-top: 30vh;
+    padding-bottom: 12vh; }
+    #menu #ulContainer ul li {
+      list-style: none;
+      font-family: "Heebo", sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      padding: .4vh 0; }
+      #menu #ulContainer ul li a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer; }
+  #menu #contactContainer {
+    max-width: 70%;
+    margin-left: 40px; }
+    #menu #contactContainer p {
+      font-family: "Hind", sans-serif; }
+      #menu #contactContainer p a {
+        color: #f84525; }
+    #menu #contactContainer ul {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1vh;
+      padding-left: 0;
+      max-width: 30%; }
+      #menu #contactContainer ul li {
+        list-style: none; }
+        #menu #contactContainer ul li i {
+          color: darkgrey;
+          cursor: pointer;
+          transition: color .6s; }
+        #menu #contactContainer ul li i:hover {
+          color: black; }
+
+  #cabecera {
+    background-color: #1f1e1d; }
+    #cabecera #nav {
+      min-height: 40vh; }
+      #cabecera #nav #burger {
         padding-top: 5vh;
-        max-width: 40%; }
+        padding-left: 5%; }
+    #cabecera #portada {
+      min-height: 60vh; }
+      #cabecera #portada #hero-container {
+        min-height: 60vh;
+        max-width: 85%; }
+        #cabecera #portada #hero-container p {
+          max-width: 70%; } }
+@media screen and (min-width: 768px) {
+  #panelBlanco {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: inline;
+    position: fixed;
+    z-index: 200;
+    margin-left: -1024px; }
+
+  #panelBlanco.clicked {
+    margin-left: 0px; }
+
+  #panelBlanco.clickedBack {
+    margin-left: -1024px; }
+
+  #menu {
+    margin-left: -1400px; }
+
+  #menu.clicked {
+    margin-left: 0px; }
+
+  #menu.clickedBack {
+    margin-left: -1400px; }
+
+  #cabecera {
+    background-color: #091b23; }
+    #cabecera #nav {
+      min-height: 20vh; }
+      #cabecera #nav #burger {
+        padding-top: 5vh;
+        padding-left: 40px; }
+    #cabecera #portada {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center; }
+      #cabecera #portada #hero-container {
+        min-height: 40vh;
+        max-width: 80%;
+        justify-self: center;
+        align-self: center; }
+        #cabecera #portada #hero-container h2 {
+          font-size: 16px; }
+        #cabecera #portada #hero-container h1 {
+          font-size: 72px;
+          line-height: 90px; }
+        #cabecera #portada #hero-container span {
+          display: block; }
+        #cabecera #portada #hero-container p {
+          font-size: 22px;
+          line-height: 38px;
+          max-width: 60%; }
         #cabecera #portada #hero-container #masInfo i {
           color: #fff;
           display: inline;
@@ -50,6 +271,281 @@
           color: #fff;
           font-family: "Heebo", sans-serif;
           display: inline;
-          cursor: pointer; }
+          cursor: pointer; } }
+@media screen and (min-width: 1024px) {
+  #panelBlanco {
+    width: calc(100% - 100px);
+    margin-left: -1200px; }
+
+  #panelBlanco.clicked {
+    margin-left: 100px; }
+
+  #panelBlanco.clickedBack {
+    margin-left: -1200px; }
+
+  #menu {
+    width: calc(100% - 100px);
+    margin-left: -2200px;
+    display: flex; }
+    #menu #ulContainer {
+      padding-top: 30vh;
+      padding-bottom: 12vh;
+      width: 65%; }
+      #menu #ulContainer ul li {
+        font-size: 5rem;
+        padding: .4vh 0; }
+    #menu #contactContainer {
+      width: 35%;
+      margin-left: 0px;
+      padding-top: 55vh; }
+      #menu #contactContainer p {
+        font-family: "Hind", sans-serif; }
+        #menu #contactContainer p a {
+          color: #f84525; }
+      #menu #contactContainer ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1vh;
+        padding-left: 0;
+        max-width: 150px; }
+        #menu #contactContainer ul li i {
+          color: darkgrey;
+          cursor: pointer;
+          transition: color .6s; }
+
+  #menu.clicked {
+    margin-left: 100px; }
+
+  #menu.clickedBack {
+    margin-left: -2200px; }
+
+  #cabecera {
+    display: flex;
+    flex-direction: row; }
+    #cabecera #nav {
+      min-height: 100vh;
+      width: 100px;
+      background-color: #091b23;
+      display: flex;
+      justify-content: center;
+      z-index: 300;
+      position: fixed; }
+      #cabecera #nav #burger {
+        padding: 0; }
+    #cabecera #portada {
+      height: 100vh;
+      width: calc(100% - 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      margin-left: 100px; }
+      #cabecera #portada #hero-container {
+        min-height: 40vh;
+        max-width: 80%;
+        padding-top: 100px; }
+        #cabecera #portada #hero-container h2 {
+          font-size: 16px; }
+        #cabecera #portada #hero-container h1 {
+          font-size: 72px;
+          line-height: 90px; }
+        #cabecera #portada #hero-container span {
+          display: block; }
+        #cabecera #portada #hero-container p {
+          font-size: 22px;
+          line-height: 38px;
+          max-width: 60%; }
+        #cabecera #portada #hero-container #masInfo {
+          max-width: 150px; }
+          #cabecera #portada #hero-container #masInfo i {
+            color: #fff;
+            display: inline;
+            cursor: pointer; }
+          #cabecera #portada #hero-container #masInfo i:hover {
+            color: #f84525; }
+          #cabecera #portada #hero-container #masInfo h4 {
+            color: #fff;
+            font-family: "Heebo", sans-serif;
+            display: inline;
+            cursor: pointer;
+            padding-left: 10px; } }
+@media screen and (min-width: 1200px) {
+  #panelBlanco {
+    width: calc(100% - 100px);
+    margin-left: -1440px; }
+
+  #panelBlanco.clicked {
+    margin-left: 100px; }
+
+  #panelBlanco.clickedBack {
+    margin-left: -1440px; }
+
+  #menu {
+    width: calc(100% - 100px);
+    margin-left: -1740px; }
+    #menu #ulContainer ul {
+      padding-left: 120px; }
+      #menu #ulContainer ul li {
+        font-size: 4rem; }
+    #menu #contactContainer {
+      width: 35%;
+      margin-left: 0px;
+      padding-top: 60vh; }
+      #menu #contactContainer p {
+        font-family: "Hind", sans-serif;
+        font-size: 18px; }
+        #menu #contactContainer p a {
+          color: #f84525; }
+      #menu #contactContainer #getTouch {
+        font-size: 20px; }
+      #menu #contactContainer ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-left: 0;
+        max-width: 150px; }
+        #menu #contactContainer ul li i {
+          color: darkgrey;
+          cursor: pointer;
+          transition: color .6s; }
+
+  #menu.clicked {
+    margin-left: 100px; }
+
+  #menu.clickedBack {
+    margin-left: -1740px; }
+
+  #cabecera {
+    width: 100%; }
+    #cabecera #nav {
+      width: 100px; }
+    #cabecera #portada {
+      width: 100%; }
+      #cabecera #portada #hero-container {
+        min-height: 40vh;
+        max-width: 80%;
+        padding-top: 100px;
+        padding-left: 6rem;
+        align-self: start; }
+        #cabecera #portada #hero-container h2 {
+          font-size: 16px; }
+        #cabecera #portada #hero-container h1 {
+          font-size: 72px;
+          line-height: 90px; }
+        #cabecera #portada #hero-container span {
+          display: block; }
+        #cabecera #portada #hero-container p {
+          font-size: 22px;
+          line-height: 38px;
+          max-width: 60%; }
+        #cabecera #portada #hero-container #masInfo {
+          max-width: 150px; }
+          #cabecera #portada #hero-container #masInfo i {
+            color: #fff;
+            display: inline;
+            cursor: pointer; }
+          #cabecera #portada #hero-container #masInfo i:hover {
+            color: #f84525; }
+          #cabecera #portada #hero-container #masInfo h4 {
+            color: #fff;
+            font-family: "Heebo", sans-serif;
+            display: inline;
+            cursor: pointer;
+            padding-left: 10px; } }
+@media screen and (min-width: 1440px) {
+  #panelBlanco {
+    width: calc(100% - 100px);
+    margin-left: -1600px; }
+
+  #panelBlanco.clicked {
+    margin-left: 100px; }
+
+  #panelBlanco.clickedBack {
+    margin-left: -1600px; }
+
+  #menu {
+    margin-left: -2000px; }
+    #menu #ulContainer ul {
+      padding-left: 170px; }
+      #menu #ulContainer ul li {
+        font-size: 4.5rem;
+        padding: .4rem 0; }
+    #menu #contactContainer {
+      width: 35%;
+      margin-left: 0px;
+      padding-top: 60vh; }
+      #menu #contactContainer p {
+        font-family: "Hind", sans-serif;
+        font-size: 18px; }
+      #menu #contactContainer #getTouch {
+        font-size: 20px; }
+
+  #menu.clicked {
+    margin-left: 100px; }
+
+  #menu.clickedBack {
+    margin-left: -2000px; } }
+@media screen and (min-width: 1600px) {
+  #panelBlanco {
+    width: calc(100% - 100px);
+    margin-left: -100%; }
+
+  #panelBlanco.clicked {
+    margin-left: 100px; }
+
+  #panelBlanco.clickedBack {
+    margin-left: -100%; }
+
+  #menu {
+    margin-left: -120%; }
+    #menu #ulContainer {
+      padding-top: 20vh; }
+      #menu #ulContainer ul {
+        padding-left: 250px; }
+        #menu #ulContainer ul li {
+          font-size: 5.5rem;
+          padding: .4rem 0; }
+    #menu #contactContainer p {
+      font-family: "Hind", sans-serif;
+      font-size: 18px; }
+    #menu #contactContainer #getTouch {
+      font-size: 20px; }
+
+  #menu.clicked {
+    margin-left: 100px; }
+
+  #menu.clickedBack {
+    margin-left: -120%; }
+
+  #cabecera #nav {
+    width: 100px; }
+  #cabecera #portada #hero-container {
+    min-height: 40vh;
+    max-width: 80%;
+    padding-top: 100px;
+    padding-left: 14rem; }
+    #cabecera #portada #hero-container h2 {
+      font-size: 16px; }
+    #cabecera #portada #hero-container h1 {
+      font-size: 72px;
+      line-height: 90px; }
+    #cabecera #portada #hero-container span {
+      display: block; }
+    #cabecera #portada #hero-container p {
+      font-size: 22px;
+      line-height: 38px;
+      max-width: 60%; }
+    #cabecera #portada #hero-container #masInfo i {
+      color: #fff;
+      display: inline;
+      cursor: pointer; }
+    #cabecera #portada #hero-container #masInfo i:hover {
+      color: #f84525; }
+    #cabecera #portada #hero-container #masInfo h4 {
+      color: #fff;
+      font-family: "Heebo", sans-serif;
+      display: inline;
+      cursor: pointer;
+      padding-left: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
