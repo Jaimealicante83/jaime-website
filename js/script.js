@@ -15,7 +15,7 @@ function hamburger(){
 		menuPrincipal.classList.remove("clicked");
 		panelBlanco.classList.add("clickedBack");
 		menuPrincipal.classList.add("clickedBack");
-		setTimeout(function(){ contactContainer.classList.remove("opacidad"); }, 1000);
+		setTimeout(function(){ contactContainer.classList.remove("opacidad"); }, 800);
 		
 	}
 	//Hacer que aparezca los datos de get in Touch 1 segundo despues de mostrarse el menu
@@ -63,7 +63,7 @@ function enlace2(){
 }
 
 function enlace3(){
-	document.querySelector('#cabecera').scrollIntoView({block: "start", behavior: "smooth"});
+	document.querySelector('#about').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function enlace4(){

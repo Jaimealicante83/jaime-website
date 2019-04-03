@@ -1,0 +1,5 @@
+Hola, me llamo Jaime y soy un programador Front-End autodidacta.
+Durante los últimos 3 años he creado webs responsive con HTML, CSS, JavaScript.
+Le saco mucho partido a FlexBox y a CSS-Grid para crear webs que se adaptan fácilmente a todos los dispositivo.
+
+Estoy abierto a cualquier tipo de colaboración profesional, ya sea como Freelance o en proyectos.

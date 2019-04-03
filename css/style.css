@@ -169,7 +169,10 @@
       -moz-transition: .75s;
       -ms-transition: .75s;
       -o-transition: .75s;
-      transition: .75s; }
+      transition: .75s;
+      -webkit-box-shadow: 10px 10px 21px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 21px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 21px -1px rgba(0, 0, 0, 0.75); }
     #portfolio .container #galeria .desaparece {
       opacity: 0; }
     #portfolio .container #galeria .aparece {
@@ -204,6 +207,28 @@
           color: #fff;
           font-weight: 700;
           opacity: 1; }
+
+#about {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #about .container {
+    max-width: 90%; }
+    #about .container .texto h2 {
+      font-family: "Heebo", sans-serif;
+      font-size: 14px;
+      color: #f84525; }
+    #about .container .texto p {
+      font-family: "Hind", sans-serif;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 400; }
+    #about .container .texto #iconosWeb {
+      display: none; }
+    #about .container .photo img {
+      max-width: 100%; }
 
 @media screen and (min-width: 600px) {
   #menu #ulContainer {
@@ -254,7 +279,21 @@
         min-height: 60vh;
         max-width: 85%; }
         #cabecera #portada #hero-container p {
-          max-width: 70%; } }
+          max-width: 70%; }
+
+  #about .container {
+    max-width: 70%; }
+    #about .container .texto h2 {
+      font-family: "Heebo", sans-serif;
+      font-size: 14px;
+      color: #f84525; }
+    #about .container .texto p {
+      font-family: "Hind", sans-serif;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 400; }
+    #about .container .photo img {
+      max-width: 100%; } }
 @media screen and (min-width: 768px) {
   #panelBlanco {
     height: 100vh;
@@ -319,7 +358,35 @@
           color: #fff;
           font-family: "Heebo", sans-serif;
           display: inline;
-          cursor: pointer; } }
+          cursor: pointer; }
+
+  #about .container {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 50%);
+    grid-column-gap: 3rem; }
+    #about .container .texto {
+      grid-row: 1 / 3;
+      grid-column: 3 / 6;
+      max-width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #about .container .texto h2 {
+        font-family: "Heebo", sans-serif;
+        font-size: 14px;
+        color: #f84525; }
+      #about .container .texto p {
+        font-family: "Hind", sans-serif;
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 400; }
+    #about .container .photo {
+      grid-row: 1 / 3;
+      grid-column: 1 / 3; }
+      #about .container .photo img {
+        max-width: 100%; } }
 @media screen and (min-width: 1024px) {
   #panelBlanco {
     width: calc(100% - 100px);
@@ -436,7 +503,10 @@
         #portfolio .container #listado ul li {
           font-size: 1.6rem; }
         #portfolio .container #listado ul .active {
-          font-size: 3.6rem; } }
+          font-size: 3.6rem; }
+
+  #about {
+    margin-left: 100px; } }
 @media screen and (min-width: 1200px) {
   #panelBlanco {
     width: calc(100% - 100px);
@@ -556,7 +626,49 @@
           #portfolio .container #listado ul li {
             font-size: 1.6rem; }
           #portfolio .container #listado ul .active {
-            font-size: 3.6rem; } }
+            font-size: 3.6rem; }
+
+  #about {
+    margin-top: 10vh;
+    margin-bottom: 10vh; }
+    #about .container {
+      max-width: 80%;
+      display: grid;
+      grid-template-columns: repeat(5, 20%);
+      grid-template-rows: repeat(2, 50%);
+      grid-column-gap: 5rem; }
+      #about .container .texto {
+        grid-row: 1 / 3;
+        grid-column: 3 / 6;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #about .container .texto h2 {
+          font-size: 16px; }
+        #about .container .texto p {
+          font-size: 20px;
+          line-height: 25px; }
+        #about .container .texto #iconosWeb {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          padding-left: 0;
+          align-items: center;
+          justify-content: space-around;
+          width: 70%;
+          margin: 0 auto; }
+          #about .container .texto #iconosWeb li:nth-child(1) {
+            color: #cf0000; }
+          #about .container .texto #iconosWeb li:nth-child(2) {
+            color: #cf0000; }
+          #about .container .texto #iconosWeb li:nth-child(3) {
+            color: #cf0000; }
+    #about .photo {
+      grid-row: 1 / 3;
+      grid-column: 1 / 3; }
+      #about .photo img {
+        max-width: 100%; } }
 @media screen and (min-width: 1440px) {
   #panelBlanco {
     width: calc(100% - 100px);
@@ -700,6 +812,10 @@
           #portfolio .container #listado ul li {
             font-size: 1.6rem; }
           #portfolio .container #listado ul .active {
-            font-size: 3.6rem; } }
+            font-size: 3.6rem; }
+
+  #about {
+    margin-top: 8vh;
+    margin-bottom: 8vh; } }
 
 /*# sourceMappingURL=style.css.map */
