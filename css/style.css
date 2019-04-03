@@ -43,7 +43,14 @@
       #menu #ulContainer ul li a {
         text-decoration: none;
         color: #000;
-        cursor: pointer; }
+        cursor: pointer;
+        -webkit-transition: .6s;
+        -moz-transition: .6s;
+        -ms-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s; }
+      #menu #ulContainer ul li a:hover {
+        color: #f84525; }
   #menu #contactContainer {
     max-width: 70%;
     margin-left: 40px;
@@ -51,7 +58,14 @@
     #menu #contactContainer p {
       font-family: "Hind", sans-serif; }
       #menu #contactContainer p a {
-        color: #f84525; }
+        color: #f84525;
+        -webkit-transition: .6s;
+        -moz-transition: .6s;
+        -ms-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s; }
+      #menu #contactContainer p a:hover {
+        color: #FFA957; }
     #menu #contactContainer #getTouch {
       font-family: "Heebo", sans-serif;
       font-size: 16px;
@@ -104,7 +118,9 @@
       padding-top: 2rem;
       padding-left: 5%;
       outline: none;
-      z-index: 900; }
+      z-index: 900;
+      position: fixed;
+      right: 0; }
   #cabecera #portada {
     heigh: auto;
     padding-top: 10rem;
@@ -233,8 +249,62 @@
       font-weight: 400; }
     #about .container .texto #iconosWeb {
       display: none; }
-    #about .container .photo img {
-      max-width: 100%; }
+    #about .container .photo {
+      margin-top: 2rem;
+      margin-bottom: 2rem; }
+      #about .container .photo img {
+        max-width: 100%; }
+
+footer {
+  background-color: #232324; }
+  footer .container {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 5rem; }
+    footer .container h6 {
+      font-family: "Heebo", sans-serif;
+      font-size: 36px;
+      line-height: 45px;
+      color: #fff;
+      margin: 0 0 2rem 0; }
+    footer .container a {
+      font-family: "Hind", sans-serif;
+      font-size: 18px;
+      text-decoration: none;
+      color: #f84525;
+      -webkit-transition: .6s;
+      -moz-transition: .6s;
+      -ms-transition: .6s;
+      -o-transition: .6s;
+      transition: .6s; }
+    footer .container a:hover {
+      color: #FFE7CF; }
+    footer .container .RRSS {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem; }
+      footer .container .RRSS p {
+        font-family: "Hind", sans-serif;
+        font-size: 14px;
+        color: #fff;
+        justify-self: center;
+        align-self: center; }
+      footer .container .RRSS ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding-left: 0; }
+        footer .container .RRSS ul li i {
+          color: #f84525;
+          cursor: pointer;
+          -webkit-transition: .6s;
+          -moz-transition: .6s;
+          -ms-transition: .6s;
+          -o-transition: .6s;
+          transition: .6s; }
+        footer .container .RRSS ul li i:hover {
+          color: #FFE7CF; }
 
 @media screen and (min-width: 600px) {
   #menu #ulContainer {
@@ -403,7 +473,33 @@
       grid-row: 1 / 3;
       grid-column: 1 / 3; }
       #about .container .photo img {
-        max-width: 100%; } }
+        max-width: 100%; }
+
+  footer {
+    margin-left: 100px; }
+    footer .container {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      footer .container h6 {
+        font-size: 46px;
+        line-height: 55px; }
+      footer .container a {
+        font-size: 20px; }
+      footer .container .RRSS {
+        margin-top: 4rem;
+        display: flex;
+        padding-bottom: 2rem;
+        max-width: 50%; }
+        footer .container .RRSS p {
+          font-size: 16px; }
+        footer .container .RRSS ul {
+          display: flex;
+          list-style: none;
+          justify-content: space-around;
+          padding-left: 0; } }
 @media screen and (min-width: 1024px) {
   #panelBlanco {
     width: calc(100% - 100px);
@@ -464,7 +560,9 @@
       z-index: 300;
       position: fixed; }
       #cabecera #nav #burger {
-        padding: 0; }
+        padding: 0;
+        position: relative;
+        left: 0; }
     #cabecera #portada {
       height: auto;
       width: calc(100% - 100px);

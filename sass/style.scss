@@ -62,6 +62,15 @@ $blanco: #fff;
 					text-decoration: none;
 					color: #000;
 					cursor: pointer;
+					-webkit-transition: .6s;
+					-moz-transition: .6s;
+					-ms-transition: .6s;
+				    -o-transition: .6s;
+				    transition: .6s;
+				}
+
+				a:hover{
+					color: $naranja;
 				}
 			}
 		}
@@ -77,6 +86,15 @@ $blanco: #fff;
 
 				a{
 					color: $naranja;
+					-webkit-transition: .6s;
+					-moz-transition: .6s;
+					-ms-transition: .6s;
+				    -o-transition: .6s;
+				    transition: .6s;
+				}
+
+				a:hover{
+					color: #FFA957;
 				}
 			}
 
@@ -152,6 +170,8 @@ $blanco: #fff;
 			padding-left: 5%;
 			outline:none;
 			z-index: 900;
+			position: fixed;
+			right: 0;
 		}
 	}
 
@@ -342,8 +362,82 @@ $blanco: #fff;
 		}
 
 		.photo{
+			margin-top: 2rem;
+			margin-bottom: 2rem;
 			img{
 				max-width: 100%;
+			}
+		}
+	}
+}
+
+footer{
+	background-color: #232324;
+
+	.container{
+		width: 85%;
+		margin:0 auto;
+		padding-top: 5rem;
+
+		h6{
+			font-family: $fontTitle;
+			font-size: 36px;
+			line-height: 45px;
+			color: #fff;
+			margin: 0 0 2rem 0;
+		}
+
+		a{	
+			font-family: $fontText;
+			font-size: 18px;
+			text-decoration: none;
+			color: $naranja;
+			-webkit-transition: .6s;
+			-moz-transition: .6s;
+			-ms-transition: .6s;
+		    -o-transition: .6s;
+		    transition: .6s;
+		}
+
+		a:hover{
+			color: #FFE7CF;
+		}
+
+		.RRSS{
+			margin-top: 4rem;
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 2rem;
+
+			p{
+				font-family: $fontText;
+				font-size: 14px;
+				color: #fff;
+				justify-self: center;
+				align-self: center;
+			}
+
+			ul{
+				display: flex;
+				list-style: none;
+				justify-content: space-around;
+				padding-left: 0;
+
+				li{
+					i{
+						color: $naranja;
+						cursor: pointer;
+						-webkit-transition: .6s;
+						-moz-transition: .6s;
+						-ms-transition: .6s;
+					    -o-transition: .6s;
+					    transition: .6s;
+					}
+
+					i:hover{
+						color: #FFE7CF;
+					}
+				}
 			}
 		}
 	}
@@ -624,6 +718,48 @@ $blanco: #fff;
 			}
 		}
 	}
+
+	footer{
+
+		margin-left: 100px;
+
+		.container{
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			h6{
+				font-size: 46px;
+				line-height: 55px;
+			}
+
+			a{	
+				font-size: 20px;
+			}
+
+			.RRSS{
+				margin-top: 4rem;
+				display: flex;
+
+				padding-bottom: 2rem;
+				max-width: 50%;
+
+				p{
+					font-size: 16px;
+				}
+
+				ul{
+					display: flex;
+					list-style: none;
+					justify-content: space-around;
+					padding-left: 0;
+
+				}
+			}
+		}
+	}
 }
 
 
@@ -725,6 +861,8 @@ $blanco: #fff;
 
 			#burger{
 				padding: 0;
+				position: relative;
+				left: 0;
 			}
 		}
 

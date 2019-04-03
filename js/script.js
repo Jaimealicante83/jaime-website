@@ -67,7 +67,7 @@ function enlace3(){
 }
 
 function enlace4(){
-	document.querySelector('#cabecera').scrollIntoView({block: "start", behavior: "smooth"});
+	document.querySelector('footer').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 
