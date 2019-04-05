@@ -6,6 +6,14 @@ const panelBlanco = document.getElementById('panelBlanco');
 const menuPrincipal = document.getElementById('menu');
 const contactContainer = document.getElementById('contactContainer');
 const fotoWeb = document.getElementById('fotoWeb');
+let linkImagen = document.getElementById('linkImagen');
+let offsetHeight = document.getElementById('portfolio').offsetHeight;
+var h = window.innerHeight;
+
+
+	console.log(h);
+	console.log(offsetHeight);
+
 
 function hamburger(){
 
@@ -83,8 +91,6 @@ let li3 = document.getElementById("li3");
 let li4 = document.getElementById("li4");
 
 
-
-
 document.querySelector('.icons').addEventListener('click', function(e){
 
 e.preventDefault();
@@ -107,7 +113,8 @@ if (counter === 0){
 		li4.classList.remove('active');
 		fotoWeb.classList.remove('aparece');
 		fotoWeb.classList.add('desaparece');
-		setTimeout(function(){fotoWeb.src = 'img/electrical.jpg'; }, 600);  
+		setTimeout(function(){fotoWeb.src = 'img/electrical.jpg'; }, 600); 
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/renewable'); 
 		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
 	}
 
@@ -119,6 +126,7 @@ if (counter === 0){
 		fotoWeb.classList.remove('aparece');
 		fotoWeb.classList.add('desaparece');
 		setTimeout(function(){fotoWeb.src = 'img/seo.png'; }, 600);
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/SEO');
 		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
 	}
 
@@ -130,6 +138,7 @@ if (counter === 0){
 		fotoWeb.classList.remove('aparece');
 		fotoWeb.classList.add('desaparece');
 		setTimeout(function(){fotoWeb.src = 'img/software.jpg'; }, 600);
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/software');
 		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
 	}
 
@@ -141,6 +150,7 @@ if (counter === 0){
 		fotoWeb.classList.remove('aparece');
 		fotoWeb.classList.add('desaparece');
 		setTimeout(function(){fotoWeb.src = 'img/tienda.png'; }, 600);
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/tienda');
 		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
 	}
 
@@ -177,3 +187,51 @@ if (counter === 0){
 });
 
 
+function electricidad(){
+
+		li1.classList.add('active');
+		li2.classList.remove('active');
+		li3.classList.remove('active');
+		li4.classList.remove('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/electrical.jpg'; }, 600); 
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/renewable'); 
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+}
+
+function elSeo(){
+		li1.classList.remove('active');
+		li2.classList.add('active');
+		li3.classList.remove('active');
+		li4.classList.remove('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/seo.png'; }, 600);
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/SEO');
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+}
+
+function isometrical(){
+		li1.classList.remove('active');
+		li2.classList.remove('active');
+		li3.classList.add('active');
+		li4.classList.remove('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/software.jpg'; }, 600);
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/software');
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+}
+
+function decorando(){
+		li1.classList.remove('active');
+		li2.classList.remove('active');
+		li3.classList.remove('active');
+		li4.classList.add('active');
+		fotoWeb.classList.remove('aparece');
+		fotoWeb.classList.add('desaparece');
+		setTimeout(function(){fotoWeb.src = 'img/tienda.png'; }, 600);
+		linkImagen.setAttribute('href', 'https://www.jaimealicante.es/tienda');
+		setTimeout(function(){fotoWeb.classList.add('aparece'); } , 800);
+}

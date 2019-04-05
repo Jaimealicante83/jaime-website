@@ -204,7 +204,14 @@
       justify-content: space-between;
       padding-top: 1rem; }
       #portfolio .container .icons i {
-        color: #fff; }
+        color: #fff;
+        -webkit-transition: .75s;
+        -moz-transition: .75s;
+        -ms-transition: .75s;
+        -o-transition: .75s;
+        transition: .75s; }
+      #portfolio .container .icons i:hover {
+        color: #f84525; }
     #portfolio .container #listado {
       margin-top: 2rem;
       margin-bottom: 2rem; }
@@ -222,7 +229,8 @@
           -moz-transition: 1s;
           -ms-transition: 1s;
           -o-transition: 1s;
-          transition: 1s; }
+          transition: 1s;
+          cursor: pointer; }
         #portfolio .container #listado ul .active {
           font-family: "Hind", sans-serif;
           font-size: 3rem;
